@@ -42,7 +42,7 @@
     "hashids": "~1.1",
     "helmet": "~3.4",
     "html-entities": "^1.2.0",
-    "jsonwebtoken": "~7.2",
+    "jsonwebtoken": "~8.0.0",
     "jssha": "^2.2.0",
     "morgan": "~1.7",
     "multer": "~1.3",
@@ -54,7 +54,8 @@
     "serve-index": "~1.8",
     "socket.io": "~1.7",
     "sqlite3": "3.1",
-    "z85": "~0.0"
+    "z85": "~0.0",
+    "snyk": "^1.590.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "~0.4",
@@ -105,7 +106,9 @@
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
     "protractor": "node test/e2eTests.js",
-    "stryker": "stryker run stryker.conf.js"
+    "stryker": "stryker run stryker.conf.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "subdomain": "juice-shop",
   "engines": {
@@ -137,5 +140,6 @@
       "beforeEach",
       "afterEach"
     ]
-  }
+  },
+  "snyk": true
 }
