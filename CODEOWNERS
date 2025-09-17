@@ -1,0 +1,2 @@
+# Assign frontend team as code owners for all files in frontend/
+/frontend/** @frontend-team
